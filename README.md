@@ -2,7 +2,7 @@
 
 <!-- <img title="" src="/imgs/mark.png" alt="" data-align="center"> -->
 
-<div align="center">s
+<div align="center">
   <img src="img/odvista.png" height="128">
 </div>
 
