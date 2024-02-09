@@ -3,7 +3,7 @@
 <!-- <img title="" src="/imgs/mark.png" alt="" data-align="center"> -->
 
 <div align="center">
-  <img src="img/odvista.png" height="128">
+  <img src="img/logo.png" height="128">
 </div>
 
 
