@@ -28,14 +28,17 @@ You can download the dataset directly using our OneDrive [link](https://tiiuae-m
 **2. Alternative Method: Downloading with AWS CLI**
 If you encounter issues with the OneDrive link or prefer using the command line, the AWS Command Line Interface (CLI) offers a reliable alternative for downloading the dataset. Below are the instructions and commands to synchronize the dataset from the AWS S3 bucket to your local machine. Note that these commands do not require AWS credentials, as the bucket is publicly accessible.
 
-Steps to Download using AWS CLI:
+Install AWS CLI: If you haven't already, you will need to install the AWS CLI on your machine. You can download it from [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
-Install AWS CLI: If you haven't already, you will need to install the AWS CLI on your machine. You can download it from here.
-Download the Dataset:
+1. Train set:
+```bash 
+aws s3 sync s3://360vistasr/train/ [Local Train Directory] --no-sign-request
+```
 
-Train dataset: aws s3 sync s3://360vistasr/train/ [Local Train Directory] --no-sign-request
-
-Train dataset: aws s3 sync s3://360vistasr/val/ [Local Val Directory] --no-sign-request 
+2. Val set:
+```bash 
+aws s3 sync s3://360vistasr/val/ [Local Val Directory] --no-sign-request 
+```
 If you encounter any problems or have questions regarding the data access process, please don't hesitate to reach ahmed.telili@tii.ae for assistance. 
 
 **Note: Currently, we are providing access to only the training set and the validation set. The test set will become available by 28th April, coinciding with the conclusion of our [challenge](https://codalab.lisn.upsaclay.fr/competitions/17458).**
