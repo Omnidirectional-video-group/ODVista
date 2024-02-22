@@ -7,7 +7,7 @@
 </div>
 
 
-### Dataset - ODVista 
+## ODVista Describtion
 
 We provide a dataset containing 200 360-degree videos, predominantly sourced from YouTube and ODV360 characterized by high quality and resolution (4K and 2K) in ERP format. All videos are licensed under Creative Commons Attribution (reuse allowed), and our dataset is exclusively designed for academic and research purposes. The video dataset encompasses various content characteristics, including outdoor and indoor scenes, as well as high motion sport contents. Each video consists of 100 frames. The dataset is partitioned into 160 videos for training, 20 for validation, and 20 for testing. Note that additional external content can be incorporated for training.
 
@@ -43,7 +43,7 @@ If you encounter any problems or have questions regarding the data access proces
 
 **Note: Currently, we are providing access to only the training set and the validation set. The test set will become available by 28th April, coinciding with the conclusion of our [challenge](https://codalab.lisn.upsaclay.fr/competitions/17458).**
 
-### Baseline example results
+## Baseline example results
 
 We evaluate the super-resolved 360° videos by comparing them to the ground truth HR ERP videos. To measure the fidelity, we adopt the widely used Weighted-to-Spherically-uniform Peak Signal to Noise Ratio (WS-PSNR) as the quantitative evaluation metric. Moreover, we incorporate runtime complexity into our final scoring formula. Therefore, models that optimally balance between quality and processing efficiency are highlight more. For more details, please refer to the detailed descriptions available on the official website [here](https://www.icip24-video360sr.ae/).
 
