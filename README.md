@@ -20,29 +20,25 @@ We provide a dataset containing 200 360-degree videos, predominantly sourced fro
 
 ## Data access
 
-There are two methods available for downloading the dataset:
 
-**1. Direct Download from OneDrive:**
-You can download the dataset directly using our OneDrive [link](https://tiiuae-my.sharepoint.com/:f:/g/personal/ahmed_telili_tii_ae/EogDz0BrzYNLqyj5LpniiOQB6yq-jtpxJFLbTjudB4rGkQ). This method is straightforward and does not require any additional tools.
-
-**2. Alternative Method: Downloading with AWS CLI**
-If you encounter issues with the OneDrive link or prefer using the command line, the AWS Command Line Interface (CLI) offers a reliable alternative for downloading the dataset. Below are the instructions and commands to synchronize the dataset from the AWS S3 bucket to your local machine. Note that these commands do not require AWS credentials, as the bucket is publicly accessible.
+**Downloading with AWS CLI**
+The AWS Command Line Interface (CLI) offers a reliable solution for downloading the dataset. Below are the instructions and commands to synchronize the dataset from the AWS S3 bucket to your local machine. Note that these commands do not require AWS credentials, as the bucket is publicly accessible.
 
 Install AWS CLI: If you haven't already, you will need to install the AWS CLI on your machine. You can download it from [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 1. Train set:
 ```bash 
-aws s3 sync s3://360vistasr/train/ [Local Train Directory] --no-sign-request
+aws s3 sync s3://odvista/train/ [Local Train Directory] --no-sign-request
 ```
 
 2. Val set:
 ```bash 
-aws s3 sync s3://360vistasr/val/ [Local Val Directory] --no-sign-request 
+aws s3 sync s3://odvista/val/ [Local Val Directory] --no-sign-request 
 ```
 
 2. Test set:
 ```bash 
-aws s3 sync s3://360vistasr/test/ [Local Test Directory] --no-sign-request 
+aws s3 sync s3://odvista/test/ [Local Test Directory] --no-sign-request 
 ```
 
 If you encounter any problems or have questions regarding the data access process, please don't hesitate to reach ahmed.telili@tii.ae for assistance. 
