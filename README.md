@@ -39,6 +39,12 @@ aws s3 sync s3://360vistasr/train/ [Local Train Directory] --no-sign-request
 ```bash 
 aws s3 sync s3://360vistasr/val/ [Local Val Directory] --no-sign-request 
 ```
+
+2. Test set:
+```bash 
+aws s3 sync s3://360vistasr/test/ [Local Test Directory] --no-sign-request 
+```
+
 If you encounter any problems or have questions regarding the data access process, please don't hesitate to reach ahmed.telili@tii.ae for assistance. 
 
 
