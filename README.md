@@ -6,6 +6,8 @@
   <img src="img/logo.png" height="128">
 </div>
 
+## Notes
+- update (2025-03-25): Database migrated to GCP infra.
 
 ## ODVista description
 
@@ -20,29 +22,27 @@ We provide a dataset containing 200 360-degree videos, predominantly sourced fro
 
 ## Data access
 
+**Downloading/Synchronizing Data Locally**
+You can download the contents using gsutil rsync. Replace [Local_Train_Directory] with your local paths:
 
-**Downloading with AWS CLI**
-The AWS Command Line Interface (CLI) offers a reliable solution for downloading the dataset. Below are the instructions and commands to synchronize the dataset from the AWS S3 bucket to your local machine. Note that these commands do not require AWS credentials, as the bucket is publicly accessible.
+1. Train Set:
 
-Install AWS CLI: If you haven't already, you will need to install the AWS CLI on your machine. You can download it from [here](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+```bash
+gsutil -m rsync -r gs://odvista/train/ [Local_Train_Directory]
+```
+Validation Set:
 
-1. Train set:
-```bash 
-aws s3 sync s3://odvista/train/ [Local Train Directory] --no-sign-request
+```bash
+gsutil -m rsync -r gs://odvista/val/ [Local_Val_Directory]
+```
+Test Set:
+
+```bash
+gsutil -m rsync -r gs://odvista/test/ [Local_Test_Directory]
 ```
 
-2. Val set:
-```bash 
-aws s3 sync s3://odvista/val/ [Local Val Directory] --no-sign-request 
-```
-
-2. Test set:
-```bash 
-aws s3 sync s3://odvista/test/ [Local Test Directory] --no-sign-request 
-```
-
+The -m flag enables multi-threading, making the operation faster, and rsync -r will recursively sync the directories. Make sure you have the Google Cloud SDK installed and initialized. This will provide you with the gsutil tool.
 If you encounter any problems or have questions regarding the data access process, please don't hesitate to reach ahmed.telili@tii.ae for assistance. 
-
 
 ## Baseline example results
 
